@@ -5,68 +5,13 @@
 (function () {
     "use strict"
 
-    // About Button Click event handler
-    function AboutButtonClick() {
-        console.log("About Button Clicked!");
+
+    function DisplayText(){
+        let paragraphMe = document.getElementById("textInMainPage");
+        let myTextAboutMe = "I am Dey. I don't want to write my full name here to make it harder for someone serching the web to link this page to me. Right now my mission is to make this webpage.";
+        paragraphMe.textContent=myTextAboutMe;
+
     }
+    window.addEventListener("load", DisplayText);
 
-    function AboutButtonOver(event) {
-        event.currentTarget.style.opacity = 0.3;
-    }
-
-    function AboutButtonOut(event) {
-        event.currentTarget.style.opacity = 1.0;
-    }
-
-    function HomeContent() {
-        let AboutButton = document.getElementById("AboutButton");
-
-        AboutButton.textContent = "About";
-
-        // About Button event listener
-        AboutButton.addEventListener("click", AboutButtonClick);
-        AboutButton.addEventListener("mouseover", AboutButtonOver);
-        AboutButton.addEventListener("mouseout", AboutButtonOut);
-    }
-
-    function ReturnPI() {
-        return Math.PI;
-    }
-
-    function AboutContent() {
-        let myNumber = ReturnPI();
-        console.log("My Funky Number: " + myNumber);
-
-        let paragraph = document.getElementById("paragraph");
-
-        let mySentence = "Words such as 'gosh' & 'heck' are less offensive, okbreyeyeyeterfwerbhyrtyrbzzzz";
-
-        paragraph.textContent = mySentence;
-    }
-
-    function Start() {
-        // local variable
-        let title = document.title;
-
-        console.log("App Started!");
-        console.log("----------------------------");
-        console.log("Title: " + title);
-
-        switch (title) {
-            case "COMP125 - Home":
-                HomeContent();
-                break;
-
-            case "COMP125 - About":
-                AboutContent();
-                break;
-
-            default:
-                break;
-        }
-    }
-
-    //window.onload = Start;
-
-    window.addEventListener("load", Start);
 })();
