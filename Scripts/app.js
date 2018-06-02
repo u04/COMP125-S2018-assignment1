@@ -14,13 +14,19 @@
             let titleMeText = "me";
             titleMe.textContent = titleMeText;
             break;
+
             case "Projects":
             let proj = document.getElementById("idOfProjectText");
             let projText = "having a github account";
             proj.textContent = projText;
+
             let projz = document.getElementById("idOfProjectTextz");
-            let textz = "hi";
-            proj.textContent = textz;
+            let textz = "Hooking onto HTMLElements";
+            projz.textContent = textz;
+
+            let projzk = document.getElementById("idOfProjectTextk");
+            let textzf = "Hooking onto HTMLElements";
+            projzk.textContent = textzf;
             break;
 
 
